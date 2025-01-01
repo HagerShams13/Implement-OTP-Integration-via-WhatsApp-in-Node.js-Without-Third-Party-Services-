@@ -1,5 +1,5 @@
-
-const whatsappAPI =async()=>{
+const { default: axios } = require("axios");
+const whatsappAPI =async(phoneNumber,otp)=>{
     //WhatsApp API Configurations
     const url = process.env.WHATSAPP_API_URL || `https://graph.facebook.com/v16.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`;
     const token = process.env.WHATSAPP_ACCESS_TOKEN;
